@@ -1,0 +1,17 @@
+name: 04 - Using action
+on:
+    push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Printing Folders
+        run: ls
+
+
+
+        # 0. checkout the repository
+        # 1. Installing deps of our react appliaction
+        # 2. Execute automate test
