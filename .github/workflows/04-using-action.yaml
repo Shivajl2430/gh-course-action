@@ -4,6 +4,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+        run:
+          working-directory: .github/workflows/04-using-action/react-app  
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -13,10 +16,10 @@ jobs:
             node-version: '20.x'
       - name: Install dependency
         run: npm ci
-        working-directory: .github/workflows/04-using-action/react-app
+        
       - name: Run Test
         run: npm run test
-        working-directory: .github/workflows/04-using-action/react-app
+        
 
 
 
