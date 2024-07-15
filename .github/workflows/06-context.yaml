@@ -1,7 +1,6 @@
 name: 06 - context
 run-name: 06 - Context | Debug ${{inputs.debug}}
 on:
- push:
  workflow_dispatch:
     inputs:
         debug:
@@ -47,4 +46,4 @@ jobs:
                 My_Overwritten_Var: 'steps'
               run: |
                   echo "Workflow env: ${{env.My_Workflow_Var}}"
-                  echo "Overwritten env: ${{env.My_Overwritten_Var}}"
+                  echo "Overwritten env: ${{env.My_Job_Var}}"
