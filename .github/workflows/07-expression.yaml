@@ -1,10 +1,10 @@
-name: '07 - expressions'
+name: 07 - expressions
+run-name: 07 - expressions | Debug - ${{inputs.debug && 'ON' || 'OFF' }}
 on:
   push:
   workflow_dispatch:
     inputs:
       debug:
-        type: boolean
         default: false
 jobs:
   echo:
